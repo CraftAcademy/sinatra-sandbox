@@ -1,0 +1,12 @@
+<h1>Hello World</h1>
+
+<% unless header.nil? %>
+	<p>list of <%= header %></p>
+<% else %>
+	<p>no header passed in</p>
+<% end %>
+<% @my_list.each do |person| %>
+  <h3>Name: <%= person[:name] %></h3>
+  <p>Role: <%= person[:role] %></p>
+<% end %>
+

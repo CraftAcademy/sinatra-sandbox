@@ -1,0 +1,6 @@
+<h2>Timeline for <%= @timeline[0].user.name %></h2>
+<% @timeline.each do |tweet| %>
+ <p><small> <%= tweet.created_at.strftime("Created on %m/%d/%Y at %I:%M%p %Z") %> </small></p>
+ <p> <%= tweet.user.name %> </p>
+ <p><strong> <%= tweet.text %> </strong><p>
+<% end %>
